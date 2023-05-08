@@ -1,7 +1,7 @@
 # 游戏策划书
 ## 1 游戏概述
 ### 1.1 游戏背景
-&emsp;&emsp;一名中医药专业学生在复习时意外睡着，穿越回东汉末年成为张仲景。但他在穿越后不小心将桌子上一张手稿意外烧毁，经他确认，正是《伤寒杂病论》中所记载的一张药方，但他的记忆中遗漏了该药方的几味药材。为了保持这份瑰宝的完整性、防止这份药方消散于历史长河中，他决定依靠自己的力量补全这份药方$\cdots$   
+&emsp;&emsp;一名中医药专业学生在复习时意外睡着，穿越回东汉末年成为张仲景。但他在穿越后不小心将桌子上一张手稿意外烧毁，经他确认，正是《伤寒杂病论》中所记载的一张药方，但他的记忆中遗漏了该药方的几味药材。为了保持这份瑰宝的完整性、防止这份药方消散于历史长河中，他决定依靠自己的力量补全这份药方 $\cdots$   
 ### 1.2 游戏类型及流程简介
 &emsp;&emsp;本游戏为一款第三人称视角的3D角色扮演游戏，主要目的是为了科普中医药相关知识，玩家需操控游戏角色**采集草药**、**配置药方**、**以身试药**直至确定完整的药方。
 ### 1.3 游戏玩法
@@ -19,30 +19,32 @@
 &emsp;&emsp;成分：桂枝、芍药、甘草、大枣、生姜。  
 &emsp;&emsp;歌诀：太阳中风桂枝汤，芍药甘草枣生姜。解肌发表调营卫，啜粥温服汗易酿。
 ### 3.2 草药
-* 桂枝：辛；甘；性温。  
-  <img src = "https://image.zhongyibaike.com/image/%E6%A1%82%E6%9E%9D/%E6%A1%82%E6%9E%9D.jpg">
-* 芍药：苦、酸，微寒。  
-  <img src = "https://www.yixue.com/images/thumb/b/b6/Bkmyg.jpg/300px-Bkmyg.jpg">
-* 甘草：甘，性平。  
-  <img src = "https://www.yixue.com/images/a/a4/Bk1es.jpg">
-* 大枣：甘，性温。  
-  <img src = "https://www.yixue.com/images/4/41/Bk0xd.jpg">
-* 生姜：辛，性温。  
-  <img src = "https://www.yixue.com/images/c/c3/Bk3p1.jpg">
-* 干姜：辛，性热。  
-  <img src = "https://www.yixue.com/images/2/22/Bk1ek.jpg">
-* 板蓝根：苦，性寒。  
-  <img src = "https://www.yixue.com/images/a/ad/Bk0bi.jpg">
-* 华山参：甘，性热，有毒。  
-  <img src = "https://www.yixue.com/images/e/eb/Bk1v3.jpg">
-* 蛇舌草：苦甘，寒。  
-  <img src = "https://www.yixue.com/images/8/8c/Bkkh5.jpg">
-* 生南星：苦辛，温，有毒。  
-  <img src = "https://ts1.cn.mm.bing.net/th/id/R-C.aae50f00abb734c7b0193766889877f7?rik=YP%2btsp96JpDHXw&riu=http%3a%2f%2fp0.qhmsg.com%2fdr%2f270_500_%2ft012c81ffec0786e95d.jpg%3fsize%3d463x561&ehk=bv%2bEdJuiq7OU9qa5JVuH0VfuRtdQIqKusNndWUNCYmM%3d&risl=&pid=ImgRaw&r=0">
+* 已有草药：
+  * 桂枝：辛；甘；性温。  
+    <img src = "https://image.zhongyibaike.com/image/%E6%A1%82%E6%9E%9D/%E6%A1%82%E6%9E%9D.jpg">
+  * 芍药：苦、酸，微寒。  
+    <img src = "https://www.yixue.com/images/thumb/b/b6/Bkmyg.jpg/300px-Bkmyg.jpg">
+  * 大枣：甘，性温。  
+    <img src = "https://www.yixue.com/images/4/41/Bk0xd.jpg">
+  * 干姜：辛，性热。  
+    <img src = "https://www.yixue.com/images/2/22/Bk1ek.jpg">
+* 采集草药：
+  * 甘草：甘，性平。砂质壤土、丘陵地带。。  
+    <img src = "https://www.yixue.com/images/a/a4/Bk1es.jpg">
+  * 生姜：辛，性温。坡地和稍阴的地块，砂壤上。  
+    <img src = "https://www.yixue.com/images/c/c3/Bk3p1.jpg">
+  * 板蓝根：苦，性寒。砂质壤土、山地林缘潮湿。  
+    <img src = "https://www.yixue.com/images/a/ad/Bk0bi.jpg">
+  * 华山参：甘，性热，有毒。山坡、山沟、草地。  
+    <img src = "https://www.yixue.com/images/e/eb/Bk1v3.jpg">
+  * 半夏：辛，温，大毒。野生于山坡、溪边阴湿的草丛中或林下。  
+    <img src = "https://www.yixue.com/images/thumb/2/2d/Bk0c4.jpg/300px-Bk0c4.jpg">
+  * 白茅根：甘，寒。低山带平原河岸草地、沙质草甸  
+    <img src = "https://www.yixue.com/images/0/02/Bk08t.jpg">
 ## 4 地图设计
 ### 4.1 书房
 &emsp;&emsp;角色可在书房中配置药品并进行试药。场景中可放置制药台、药炉、药柜等可交互物品。
-### 4.2 山林
-&emsp;&emsp;场景地图有地形起伏、地面为草地以及各种树木，有可交互草药分布。角色可在森林中移动进行，并收集草药。
+### 4.2 坡地
+&emsp;&emsp;场景地图有地形起伏、地面为草地以及稀疏树木，有河流经过，有可交互草药分布。角色可在地形中移动进行，并收集草药。
 ## 5 游戏美术及音乐
 &emsp;&emsp;游戏美术及音乐均采用免费资源，对于简单模型团队成员可尝试自主建模。
