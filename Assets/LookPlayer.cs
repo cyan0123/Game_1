@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class LookPlayer : MonoBehaviour
 {
-    public GameObject player;
+    private GameObject player;
 
     private void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     private void LateUpdate()

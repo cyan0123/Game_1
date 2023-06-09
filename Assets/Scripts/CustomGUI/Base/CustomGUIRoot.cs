@@ -15,12 +15,7 @@ public class CustomGUIRoot : MonoBehaviour
 
     private void OnGUI()
     {
-        allControls = this.GetComponentsInChildren<CustomGUIControl>();
-        if (!Application.isPlaying)
-        {
-            allControls = this.GetComponentsInChildren<CustomGUIControl>();
-        }
-
+        allControls = this.GetComponentsInChildren<CustomGUIControl>(); 
         for (int i = 0;i<allControls.Length;i++)
         {
             allControls[i].DrawGUI();

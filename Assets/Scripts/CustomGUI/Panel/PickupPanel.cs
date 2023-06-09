@@ -5,60 +5,54 @@ using UnityEngine;
 
 public class PickupPanel : Basepanel<PickupPanel>
 {
-    private List<HerbData> herbDatas= new List<HerbData>();
     CustomGUIButton[] btnHrebs;
+    public Texture2D blank;
 
-    public void addHerb(HerbData herbData)
-    {
-        //print(herbData.herbName);
-        herbDatas.Add(herbData);
-    }
-    public void delHerb(HerbData herbData)
-    {
-        herbDatas.Remove(herbData);
-    }
+
     // Start is called before the first frame update
     void Start()
     {
-        btnHrebs = GetComponentsInChildren<CustomGUIButton>();
-        
+        btnHrebs = GetComponentsInChildren< CustomGUIButton>();
         this.HidePanel();
     }
 
     // Update is called once per frame
     void Update()
     {
-        for (int i = 0; i < herbDatas.Count; i++)
+        //拾取界面
+        for (int i = 0; i < Pickup.Instance.herbs.Count && i<4; i++)
         {
-            btnHrebs[i].content.text = herbDatas[i].herbName;
-            btnHrebs[i].content.image = herbDatas[i].texture;
+            btnHrebs[i].content.text = Pickup.Instance.herbs[i].herbData.herbName;
+            btnHrebs[i].content.image = Pickup.Instance.herbs[i].herbData.texture;
         }
+        for(int i = Pickup.Instance.herbs.Count; i <4; i++)
+        {
+            btnHrebs[i].content.text = "";
+            btnHrebs[i].content.image = blank;
+        }
+        //按E拾取
         if(Input.GetKeyUp(KeyCode.E))
         {
-            //for (int i = 0; i < herbDatas.Count; i++)
-            //    print(herbDatas[i].herbName);
-            pickupAll(herbDatas);
+            Pickup.Instance.pickup();
         }
-
     }
 
     private void pickupAll(List<HerbData> herbDatas)
     {
-        for (int i = 0; i < herbDatas.Count; i++)
+        for (int i = herbDatas.Count-1; i > -1 ; i--)
         {
-            //print("执行");
-            //print(herbDatas[i].herbName);
             pickup(herbDatas[i]);
         }
-        for (int i = 0; i < herbDatas.Count; i++)
-        {
-            this.delHerb(herbDatas[i]);
-        }
     }
-    private void pickup(HerbData herb)
+    private void pickup(HerbData herbData)
     {
-        Package.Instance.addHerb(herb);
-        //this.delHerb(herb);
-        herb.gameObject.SetActive(false);
+        //if (Package.Instance.herbDatas.Count >= 16) return;
+        //Package.Instance.addHerb(herbData);
+        //Pickup.Instance.delHerb(herbData);
+        //Destroy(herb.gameObject);
+        //if(PickupPanel.Instance.herbDatas.Count == 0)
+        //{
+        //    PickupPanel.Instance.HidePanel();
+        //}
     }
 }
