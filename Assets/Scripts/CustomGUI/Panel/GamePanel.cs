@@ -10,9 +10,13 @@ public class GamePanel : Basepanel<GamePanel>
 
     private MouseLook mouseLook;
     public CustomGUITexture nowBk;
-    int nowItem;
+    public int nowItem;
 
     private HerbData blankHerb;
+    private int texWidth = 240;
+    private CustomGUITexture texHot;
+    private CustomGUITexture texCold;
+    private CustomGUITexture texPoison;
 
     // Start is called before the first frame update
     void Start()
@@ -27,6 +31,9 @@ public class GamePanel : Basepanel<GamePanel>
         }
 
         blankHerb = new HerbData("", blank, HerbData.HerbType.Qita);
+        texHot = transform.Find("TexHot").GetComponent<CustomGUITexture>();
+        texCold = transform.Find("TexCold").GetComponent<CustomGUITexture>();
+        texPoison = transform.Find("TexPoison").GetComponent<CustomGUITexture>();
     }
 
     // Update is called once per frame
@@ -77,5 +84,19 @@ public class GamePanel : Basepanel<GamePanel>
             terms[nowItem].delHerb(terms[nowItem].herbData);
         }
 
+        if(Input.GetKeyDown(KeyCode.G))
+        {
+            ChaMove.Instance.StartEat();
+        }
+        if (Input.GetKeyUp(KeyCode.G))
+        {
+            ChaMove.Instance.EndEat();
+        }
+
+        //¸üÐÂÑªÌõ
+        texHot.guiPos.width = texWidth / 5 * PlayerState.Instance.hot;
+        texCold.guiPos.width = texWidth / 5 * PlayerState.Instance.cold;
+        texPoison.guiPos.width = texWidth / 5 * PlayerState.Instance.poison;
     }
+
 }

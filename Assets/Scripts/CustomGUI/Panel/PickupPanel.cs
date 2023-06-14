@@ -7,7 +7,7 @@ public class PickupPanel : Basepanel<PickupPanel>
 {
     CustomGUIButton[] btnHrebs;
     public Texture2D blank;
-
+    //public ChaMove chaMove;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +33,8 @@ public class PickupPanel : Basepanel<PickupPanel>
         //°´EÊ°È¡
         if(Input.GetKeyUp(KeyCode.E))
         {
+            //chaMove.Setpick();
+            ChaMove.Instance.Setpick();
             Pickup.Instance.pickup();
         }
     }

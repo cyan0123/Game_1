@@ -4,6 +4,17 @@ using UnityEngine;
 
 public class ChaMove : MonoBehaviour
 {
+    private static ChaMove instance;
+    public static ChaMove Instance
+    {
+        get { return instance; }
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
     private Vector3 lastPosition;
     private float lastTime;
 
@@ -12,11 +23,14 @@ public class ChaMove : MonoBehaviour
     private float Yspeed;
     //private float height;
     private bool XisZero;
+    private bool Gathering;
+    [HideInInspector]
+    public bool Eating;
 
     Animator anim;
     void Start()
     {
-        anim = GetComponent<Animator>();
+        anim = transform.GetChild(1).GetComponent<Animator>();
     }
 
     void Update()
@@ -46,6 +60,17 @@ public class ChaMove : MonoBehaviour
 
         lastPosition = currentPosition;
         lastTime = currentTime;
+
+
+        if (Eating)
+        {
+            //如果吃东西时间足够
+            if (Time.time - eatStartTime > 1.5f)
+            {
+                eatEvent();
+            }
+        }
+
         UpdateAnim();
     }
 
@@ -54,7 +79,53 @@ public class ChaMove : MonoBehaviour
         anim.SetFloat("Zspeed",Zspeed);
         anim.SetFloat("Xspeed", Xspeed);
         anim.SetFloat("Yspeed", Yspeed);
-        //anim.SetFloat("Height", height);
         anim.SetBool("XisZero", XisZero);
+        anim.SetBool("Gathering", Gathering);
+        anim.SetBool("Eating", Eating);
+    }
+    public void Setpick()
+    {
+        Gathering = true;
+        StartCoroutine(Timer(1f));  // 启动一个5秒的计时器
+    }
+
+    IEnumerator Timer(float duration)
+    {
+        float elapsedTime = 0f;
+
+        while (elapsedTime < duration)
+        {
+            // 每帧增加时间
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        // 计时器完成后的逻辑操作
+        //Debug.Log("计时器完成");
+        Gathering = false;
+        
+    }
+
+    float eatStartTime = 0;
+    public void StartEat()
+    {
+        Eating = true;
+        eatStartTime = Time.time;
+    }
+    public void EndEat()
+    {
+        Eating = false;
+    }
+
+    public void eatEvent()
+    {
+        Eating = false;
+        //print("吃东西事件");
+        //如果不是草药
+        if( Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.herbType == HerbData.HerbType.Soup)
+        {
+            print("吃药了吃药了   ");
+        }
+
     }
 }

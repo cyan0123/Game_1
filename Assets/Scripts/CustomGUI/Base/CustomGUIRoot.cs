@@ -18,7 +18,20 @@ public class CustomGUIRoot : MonoBehaviour
         allControls = this.GetComponentsInChildren<CustomGUIControl>(); 
         for (int i = 0;i<allControls.Length;i++)
         {
+            if (allControls[i] is PacItem || allControls[i] is PacItem CookItem) continue; 
             allControls[i].DrawGUI();
+        }
+
+        if (Application.isPlaying)
+        {
+            if (CookPanel.Instance.gameObject.activeSelf)
+            {
+                for (int i = 0; i < ItemRenderContol.Instance.allItems.Count; i++)
+                {
+                    ItemRenderContol.Instance.allItems[i].DrawGUI();
+                    //print(ItemRenderContol.Instance.allItems[i].transform.parent.name);
+                }
+            }
         }
     }
 }
