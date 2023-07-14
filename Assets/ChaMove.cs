@@ -26,11 +26,11 @@ public class ChaMove : MonoBehaviour
     private bool Gathering;
     [HideInInspector]
     public bool Eating;
-
     Animator anim;
     void Start()
     {
-        anim = transform.GetChild(1).GetComponent<Animator>();
+        /*anim = transform.GetChild(1).GetComponent<Animator>();*/
+        anim = this.gameObject.GetComponent<Animator>();
     }
 
     void Update()
@@ -65,7 +65,7 @@ public class ChaMove : MonoBehaviour
         if (Eating)
         {
             //如果吃东西时间足够
-            if (Time.time - eatStartTime > 1.5f)
+            if (Time.time - eatStartTime > 3.0f)
             {
                 eatEvent();
             }
@@ -109,8 +109,14 @@ public class ChaMove : MonoBehaviour
     float eatStartTime = 0;
     public void StartEat()
     {
-        Eating = true;
-        eatStartTime = Time.time;
+        /*Eating = true;
+        eatStartTime = Time.time;*/
+        if (Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.herbType == HerbData.HerbType.Soup
+            && !Eating)
+        {
+            Eating = true;
+            eatStartTime = Time.time;
+        }
     }
     public void EndEat()
     {
@@ -120,12 +126,12 @@ public class ChaMove : MonoBehaviour
     public void eatEvent()
     {
         Eating = false;
-        //print("吃东西事件");
+        print("吃东西");
         //如果不是草药
-        if( Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.herbType == HerbData.HerbType.Soup)
+        /*if( Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.herbType == HerbData.HerbType.Soup)
         {
             print("吃药了吃药了   ");
-        }
+        }*/
 
     }
 }

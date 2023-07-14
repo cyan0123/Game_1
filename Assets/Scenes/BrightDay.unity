@@ -217,6 +217,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1 &10127381
@@ -863,6 +867,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2597405080650427318, guid: 01990df97cfef5549baaab06da84831b, type: 3}
   m_PrefabInstance: {fileID: 1960907309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &140478099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 92485ef01ec03d8438fe7af0b3409dc9, type: 3}
+  m_PrefabInstance: {fileID: 1705515728}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &158823480 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4922444305696846, guid: ac1cc01cb5dbf5d4f869c403b38f8a21, type: 3}
@@ -1300,6 +1309,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &228271030
@@ -1778,6 +1791,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1 &284663423
@@ -2004,6 +2021,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &331188403
@@ -3343,6 +3364,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &597568607 stripped
@@ -3426,6 +3451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f32182e50f022a418276ad5b78b83e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Eating: 0
 --- !u!1 &618408150 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8710270341765662142, guid: d88c19641091d574481400178057291c, type: 3}
@@ -3530,6 +3556,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &621120423 stripped
@@ -3947,6 +3977,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!114 &654046143
@@ -4043,6 +4077,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &694131754
@@ -4301,6 +4339,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &696901729
@@ -4964,6 +5006,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &830003388
@@ -5158,6 +5204,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 92485ef01ec03d8438fe7af0b3409dc9, type: 3}
   m_PrefabInstance: {fileID: 1705515728}
   m_PrefabAsset: {fileID: 0}
+--- !u!54 &900061297
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140478099}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!136 &900061298
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140478099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.797596
+  m_Height: 3.7194166
+  m_Direction: 1
+  m_Center: {x: -0.017980576, y: 1.3597083, z: 0.31557655}
 --- !u!4 &923019340 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7194343493146941143, guid: d88c19641091d574481400178057291c, type: 3}
@@ -5461,6 +5537,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1039427152
@@ -5792,6 +5872,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1077841831 stripped
@@ -6436,6 +6520,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1195319218
@@ -6726,6 +6814,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1222272761 stripped
@@ -7593,6 +7685,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1314751061 stripped
@@ -8008,6 +8104,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1424346480
@@ -8429,6 +8529,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1492197202
@@ -8608,6 +8712,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1497365636 stripped
@@ -8840,6 +8948,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1568709849
@@ -9104,6 +9216,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1 &1609206275
@@ -9232,6 +9348,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1610149904 stripped
@@ -9541,6 +9661,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1 &1658517391
@@ -9669,6 +9793,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1666011899
@@ -10097,6 +10225,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1705515728
@@ -10288,6 +10420,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!850595691 &1748137167
@@ -10760,6 +10896,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1823023521
@@ -10959,6 +11099,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1835081837 stripped
@@ -11143,6 +11287,7 @@ MonoBehaviour:
   terms: []
   blank: {fileID: 10906, guid: 0000000000000000f000000000000000, type: 3}
   nowBk: {fileID: 1197903948}
+  nowItem: 0
 --- !u!1001 &1879702104
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11427,6 +11572,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &1891803078 stripped
@@ -11746,6 +11895,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!114 &1992575469
@@ -11842,6 +11995,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!1001 &1995505848
@@ -12012,12 +12169,28 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043188175}
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 5
-  m_Height: 2.7545342
-  m_Direction: 1
-  m_Center: {x: -0.0026468046, y: 1.3802602, z: -0.10593345}
+  m_Radius: 0.90185344
+  m_Height: 6.3702564
+  m_Direction: 0
+  m_Center: {x: 0.005372046, y: 1.3802719, z: 0.0035127394}
+--- !u!54 &2043188184
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2043188175}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
 --- !u!4 &2053160655 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7194343493146941143, guid: d88c19641091d574481400178057291c, type: 3}
@@ -12164,6 +12337,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!114 &2120535347
@@ -12260,6 +12437,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &2124273557 stripped
@@ -12290,7 +12471,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4207592639240718551, guid: 670757c854d764e46b527ee51447f603, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7798698
+      value: 1.37
       objectReference: {fileID: 0}
     - target: {fileID: 4207592639240718551, guid: 670757c854d764e46b527ee51447f603, type: 3}
       propertyPath: m_LocalPosition.z
@@ -12323,6 +12504,10 @@ PrefabInstance:
     - target: {fileID: 4207592639240718551, guid: 670757c854d764e46b527ee51447f603, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4211555625837283786, guid: 670757c854d764e46b527ee51447f603, type: 3}
+      propertyPath: herbData.hot
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4211555625837283787, guid: 670757c854d764e46b527ee51447f603, type: 3}
       propertyPath: m_Name
@@ -12411,21 +12596,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Huashanshen
       objectReference: {fileID: 0}
+    - target: {fileID: 4155532619337131089, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
+      propertyPath: herbData.hot
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4155532619337131089, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
+      propertyPath: herbData.poison
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4160558971117823308, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 4160558971117823308, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20.490986
+      value: -13.08
       objectReference: {fileID: 0}
     - target: {fileID: 4160558971117823308, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7798698
+      value: 4.2
       objectReference: {fileID: 0}
     - target: {fileID: 4160558971117823308, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.6158714
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4160558971117823308, guid: f3ec1284a34ddc74dbe85c8ac5a8c157, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13190,21 +13383,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: BaiMaoGen
       objectReference: {fileID: 0}
+    - target: {fileID: 1188312764954527817, guid: b60bbd5e376baf44eb08f3633563d2af, type: 3}
+      propertyPath: herbData.cold
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1188312764954527823, guid: b60bbd5e376baf44eb08f3633563d2af, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 1188312764954527823, guid: b60bbd5e376baf44eb08f3633563d2af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1509857
+      value: -2.71
       objectReference: {fileID: 0}
     - target: {fileID: 1188312764954527823, guid: b60bbd5e376baf44eb08f3633563d2af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35986972
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1188312764954527823, guid: b60bbd5e376baf44eb08f3633563d2af, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.259869
+      value: 12.53
       objectReference: {fileID: 0}
     - target: {fileID: 1188312764954527823, guid: b60bbd5e376baf44eb08f3633563d2af, type: 3}
       propertyPath: m_LocalRotation.w
@@ -13467,15 +13664,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3196295348601827371, guid: bea655bc6699c844382bd3a532d9d9db, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1509857
+      value: -12.4
       objectReference: {fileID: 0}
     - target: {fileID: 3196295348601827371, guid: bea655bc6699c844382bd3a532d9d9db, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.35986972
+      value: 1.7
       objectReference: {fileID: 0}
     - target: {fileID: 3196295348601827371, guid: bea655bc6699c844382bd3a532d9d9db, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 11.259869
+      value: 10.52
       objectReference: {fileID: 0}
     - target: {fileID: 3196295348601827371, guid: bea655bc6699c844382bd3a532d9d9db, type: 3}
       propertyPath: m_LocalRotation.w
@@ -29088,6 +29285,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
   idx: 0
@@ -29200,6 +29401,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &3808015975935157989
@@ -29326,6 +29531,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
   idx: 0
@@ -29468,6 +29677,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &3808015976108963523
@@ -29594,6 +29807,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &3808015976221449549
@@ -29705,6 +29922,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &3808015976232793958
@@ -29831,6 +30052,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
   idx: 0
@@ -29973,6 +30198,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
   idx: 0
@@ -30100,6 +30329,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
 --- !u!4 &3808015976834203042
@@ -30226,6 +30459,10 @@ MonoBehaviour:
     herbName: 
     texture: {fileID: 0}
     herbType: 0
+    hot: 0
+    cold: 0
+    poison: 0
+  Bk: {fileID: 0}
   pointerX: 0
   pointerY: 0
   idx: 0
@@ -30387,21 +30624,29 @@ PrefabInstance:
       propertyPath: m_Name
       value: Banxia
       objectReference: {fileID: 0}
+    - target: {fileID: 444387957302437489, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
+      propertyPath: herbData.hot
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 444387957302437489, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
+      propertyPath: herbData.poison
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 449485642314852204, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 449485642314852204, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -16.480988
+      value: -15.39
       objectReference: {fileID: 0}
     - target: {fileID: 449485642314852204, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6098697
+      value: -1.32
       objectReference: {fileID: 0}
     - target: {fileID: 449485642314852204, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.73913
+      value: -13
       objectReference: {fileID: 0}
     - target: {fileID: 449485642314852204, guid: 9c96718eef900c943a9fb58f5336d125, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31603,21 +31848,25 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 1431029905}
     m_Modifications:
+    - target: {fileID: 6467447514569869397, guid: d1633c39d5e19f94fad61459225c0f08, type: 3}
+      propertyPath: herbData.cold
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6559852168069447852, guid: d1633c39d5e19f94fad61459225c0f08, type: 3}
       propertyPath: m_RootOrder
       value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 6559852168069447852, guid: d1633c39d5e19f94fad61459225c0f08, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.1509857
+      value: 4.41
       objectReference: {fileID: 0}
     - target: {fileID: 6559852168069447852, guid: d1633c39d5e19f94fad61459225c0f08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.7798698
+      value: -2.13
       objectReference: {fileID: 0}
     - target: {fileID: 6559852168069447852, guid: d1633c39d5e19f94fad61459225c0f08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.3898697
+      value: -7.34
       objectReference: {fileID: 0}
     - target: {fileID: 6559852168069447852, guid: d1633c39d5e19f94fad61459225c0f08, type: 3}
       propertyPath: m_LocalRotation.w

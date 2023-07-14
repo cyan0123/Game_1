@@ -24,8 +24,8 @@ public class Pickup
     public void pickup()
     {
         Package.Instance.addHerb(this.herbs[0]);
-        Object.Destroy(this.herbs[0].gameObject);
-        this.delHerb(this.herbs[0]);
+        /*Object.Destroy(this.herbs[0].gameObject);
+        this.delHerb(this.herbs[0]);*/
         if (herbs.Count == 0) PickupPanel.Instance.HidePanel();
     }
 

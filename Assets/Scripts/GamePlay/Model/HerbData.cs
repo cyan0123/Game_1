@@ -14,15 +14,32 @@ public class HerbData
         BanXia,
         BaiMaoGen,
         Soup,
-        Qita
+        Qita,
+        GuiZhi,
+        ShaoYao,
+        DaZao,
+        GanJiang
     }
     public string herbName;
     public Texture2D texture;
     public HerbType herbType;
+    public int hot;
+    public int cold;
+    public int poison;
+
     public HerbData(string herbName, Texture2D texture, HerbType herbType)
     {
         this.herbName = herbName;
         this.texture = texture;
         this.herbType = herbType;
+    }
+    public HerbData(string herbName, Texture2D texture, HerbType herbType, int hot, int cold, int poison)
+    {
+        this.herbName = herbName;
+        this.texture = texture;
+        this.herbType = herbType;
+        this.hot = hot;
+        this.cold = cold;
+        this.poison = poison;
     }
 }

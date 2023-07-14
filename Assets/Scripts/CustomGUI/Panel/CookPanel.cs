@@ -12,6 +12,7 @@ public class CookPanel : Basepanel<CookPanel>
     public Texture2D soupTexture;
     public CustomGUIButton btnCreate;
     private HerbData blankHerb;
+    private int cookNum;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,8 @@ public class CookPanel : Basepanel<CookPanel>
         product = transform.Find("cookItems/itemProduct").GetComponent<Item>();
         product.updataHerb(blankHerb);
 
+        cookNum = 0;
+
         btnCreate.clickEvent += () =>
         {
             Create();
@@ -51,19 +54,30 @@ public class CookPanel : Basepanel<CookPanel>
     {
         //product.updataHerb(new HerbData("ÏÉµ¤", soupTexture,HerbData.HerbType.Soup));
         //Herb tmp = new Herb("ÏÉµ¤", soupTexture, HerbData.HerbType.Soup);
-
-        Package.Instance.addHerb(new Herb("ÏÉµ¤", soupTexture, HerbData.HerbType.Soup));
+        print(cookNum);
+        if (cookNum == 5)
+        {
+            Package.Instance.addHerb(new Herb("ÏÉµ¤", soupTexture, HerbData.HerbType.Soup));
+            for (int i = 4; i >= 0; i--)
+            {
+                Cook.Instance.mark[i] = false;
+                Cook.Instance.herbDatas[i] = null;
+                cookItems[i].updataHerb(blankHerb);
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+        cookNum = 0;
         //»­Á¶Ò©²¿·ÖUI
         for (int i = 0; i < 5; i++)
         {
             if (Cook.Instance.mark[i])
             {
                 cookItems[i].updataHerb(Cook.Instance.herbDatas[i]);
+                cookNum++;
             }
             else
             {
@@ -81,6 +95,6 @@ public class CookPanel : Basepanel<CookPanel>
             pacItems[i].updataHerb(blankHerb);
         }
 
-        
+
     }
 }

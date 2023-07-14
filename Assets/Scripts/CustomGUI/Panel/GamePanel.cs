@@ -84,14 +84,14 @@ public class GamePanel : Basepanel<GamePanel>
             terms[nowItem].delHerb(terms[nowItem].herbData);
         }
 
-        if(Input.GetKeyDown(KeyCode.G))
+        if(Input.GetKeyUp(KeyCode.G))
         {
             ChaMove.Instance.StartEat();
         }
-        if (Input.GetKeyUp(KeyCode.G))
+        /*if (Input.GetKeyUp(KeyCode.G))
         {
             ChaMove.Instance.EndEat();
-        }
+        }*/
 
         //¸üÐÂÑªÌõ
         texHot.guiPos.width = texWidth / 5 * PlayerState.Instance.hot;
