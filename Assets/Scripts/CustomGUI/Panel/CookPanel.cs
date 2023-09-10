@@ -57,7 +57,14 @@ public class CookPanel : Basepanel<CookPanel>
         print(cookNum);
         if (cookNum == 5)
         {
-            Package.Instance.addHerb(new Herb("ÏÉµ¤", soupTexture, HerbData.HerbType.Soup));
+            int hot = 0, cold = 0, poison = 0;
+            for (int i = 4; i >= 0; i--)
+            {
+                hot+= Cook.Instance.herbDatas[i].hot;
+                cold+= Cook.Instance.herbDatas[i].cold;
+                poison+= Cook.Instance.herbDatas[i].poison;
+            }
+            Package.Instance.addHerb(new Herb("ÏÉµ¤", soupTexture, HerbData.HerbType.Soup, hot, cold, poison));
             for (int i = 4; i >= 0; i--)
             {
                 Cook.Instance.mark[i] = false;

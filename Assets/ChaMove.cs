@@ -24,6 +24,8 @@ public class ChaMove : MonoBehaviour
     //private float height;
     private bool XisZero;
     private bool Gathering;
+    private bool HotState = false;
+    private bool ColdState = false;
     [HideInInspector]
     public bool Eating;
     Animator anim;
@@ -76,9 +78,25 @@ public class ChaMove : MonoBehaviour
 
     void UpdateAnim()
     {
-        anim.SetFloat("Zspeed",Zspeed);
-        anim.SetFloat("Xspeed", Xspeed);
+        /*if (PlayerState.Instance.cold >= 5 && !ColdState)
+        {
+            Zspeed /= 1000;
+            Yspeed /= 1000;
+            Xspeed /= 1000;
+            *//*ColdState = true;*/
+            /*print("cold");*//*
+        }
+        if (PlayerState.Instance.hot >= 5 && !HotState)
+        {
+            (Zspeed, Yspeed) = (Yspeed, Zspeed);
+            *//*HotState = true;*/
+            /*print("hot");*//*
+        }*/
+
+        anim.SetFloat("Zspeed", Zspeed);
         anim.SetFloat("Yspeed", Yspeed);
+        anim.SetFloat("Xspeed", Xspeed);
+
         anim.SetBool("XisZero", XisZero);
         anim.SetBool("Gathering", Gathering);
         anim.SetBool("Eating", Eating);
@@ -128,10 +146,19 @@ public class ChaMove : MonoBehaviour
         Eating = false;
         print("吃东西");
         //如果不是草药
-        /*if( Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.herbType == HerbData.HerbType.Soup)
+        if (Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.herbType == HerbData.HerbType.Soup)
         {
             print("吃药了吃药了   ");
-        }*/
+
+            PlayerState.Instance.hot += Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.hot;
+            PlayerState.Instance.cold += Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.cold;
+            PlayerState.Instance.poison += Package.Instance.herbs[GamePanel.Instance.nowItem].herbData.poison;
+            Package.Instance.delHerb(Package.Instance.herbs[GamePanel.Instance.nowItem].herbData);
+
+            print(PlayerState.Instance.hot);
+            print(PlayerState.Instance.cold);
+            print(PlayerState.Instance.poison);
+        }
 
     }
 }
